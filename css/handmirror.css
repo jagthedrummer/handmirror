@@ -1,0 +1,6 @@
+.codemirror-ui-button-frame input,.codemirror-ui-button-frame label{
+	font-size:1.1em;	
+}
+
+.codemirror-ui-button-frame input[type=button]{
+}

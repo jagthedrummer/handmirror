@@ -26,7 +26,9 @@ function onLoadInit() {
 	  
 	mirror = new CodeMirrorUI(textarea,
 	   {
-	  	path : 'js/codemirror-ui/js/'
+	  	path : 'js/codemirror-ui/js/',
+		quickSearch : true,
+		buttons : ['undo','redo','jump','reindent']
 	   },
 	   {
 	    height: "150px",

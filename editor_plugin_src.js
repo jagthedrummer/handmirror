@@ -1,15 +1,12 @@
 /**
- * $Id: editor_plugin_src.js 201 2007-02-12 15:56:56Z spocke $
- *
- * @author Moxiecode
- * @copyright Copyright � 2004-2008, Moxiecode Systems AB, All rights reserved.
+ * @author Jeremy Green
+ * @copyright Copyright � 2011, Jeremy Green
  */
 
 (function() {
 	// Load plugin specific language pack
 	tinymce.PluginManager.requireLangPack('handmirror');
-
-	tinymce.create('tinymce.plugins.ExamplePlugin', {
+	tinymce.create('tinymce.plugins.handmirror', {
 		/**
 		 * Initializes the plugin, this will be executed after the plugin has been created.
 		 * This call is done before the editor instance has finished it's initialization so use the onInit event
@@ -19,24 +16,24 @@
 		 * @param {string} url Absolute URL to where the plugin is located.
 		 */
 		init : function(ed, url) {
-			// Register the command so that it can be invoked by using tinyMCE.activeEditor.execCommand('mceExample');
-			ed.addCommand('mceExample', function() {
+			// Register the command so that it can be invoked by using tinyMCE.activeEditor.execCommand('handmirror');
+			ed.addCommand('handmirror', function() {
+				
 				ed.windowManager.open({
 					file : url + '/dialog.htm',
-					width : 500 + parseInt(ed.getLang('handmirror.delta_width', 0)),
-					height : 400 + parseInt(ed.getLang('handmirror.delta_height', 0)),
+					width : 800,
+					height : 600,
 					inline : 1
 				}, {
-					plugin_url : url, // Plugin absolute URL
-					some_custom_arg : 'custom arg' // Custom argument
+					plugin_url : url // Plugin absolute URL
 				});
 			});
 
 			// Register handmirror button
 			ed.addButton('handmirror', {
 				title : 'handmirror.desc',
-				cmd : 'mceExample',
-				image : url + '/img/example.gif'
+				cmd : 'handmirror',
+				image : url + '/img/html.gif'
 			});
 
 			// Add a node change handler, selects the button in the UI when a image is selected
@@ -67,15 +64,15 @@
 		 */
 		getInfo : function() {
 			return {
-				longname : 'Example plugin',
-				author : 'Some author',
-				authorurl : 'http://tinymce.moxiecode.com',
-				infourl : 'http://wiki.moxiecode.com/index.php/TinyMCE:Plugins/handmirror',
-				version : "1.0"
+				longname : 'handmirror',
+				author : 'Jeremy Green',
+				authorurl : 'http://www.octolabs.com/',
+				infourl : 'https://github.com/jagthedrummer/handmirror',
+				version : "0.0.1"
 			};
 		}
 	});
 
 	// Register plugin
-	tinymce.PluginManager.add('handmirror', tinymce.plugins.ExamplePlugin);
+	tinymce.PluginManager.add('handmirror', tinymce.plugins.handmirror);
 })();
