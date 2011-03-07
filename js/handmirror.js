@@ -26,9 +26,7 @@ function onLoadInit() {
 	  
 	mirror = new CodeMirrorUI(textarea,
 	   {
-	  	path : 'js/codemirror-ui/js/',
-		quickSearch : true,
-		buttons : ['undo','redo','jump','reindent']
+	  	path : 'js/codemirror-ui/js/'
 	   },
 	   {
 	    height: "150px",
@@ -37,7 +35,9 @@ function onLoadInit() {
 	    stylesheet: ["js/codemirror-ui/lib/CodeMirror-0.93/css/xmlcolors.css", "js/codemirror-ui/lib/CodeMirror-0.93/css/jscolors.css", "js/codemirror-ui/lib/CodeMirror-0.93/css/csscolors.css"],
 	    path: "js/codemirror-ui/lib/CodeMirror-0.93/js/",
 		reindentOnLoad : true,
-	    autoMatchParens: true
+	    autoMatchParens: true,
+		disableSpellcheck : true,
+		lineNumbers : true
 	  });
 
 	resizeInputs();
@@ -60,11 +60,11 @@ function resizeInputs() {
 	
 	var el = findCodeMirror();
 	if (!tinymce.isIE) {
-		 wHeight = self.innerHeight - 85;
-		 wWidth = self.innerWidth - 16;
+		 wHeight = self.innerHeight - 95;
+		 wWidth = self.innerWidth - 50;
 	} else {
-		 wHeight = document.body.clientHeight - 70;
-		 wWidth = document.body.clientWidth - 16;
+		 wHeight = document.body.clientHeight - 80;
+		 wWidth = document.body.clientWidth - 50;
 	}
 
 	el.style.height = Math.abs(wHeight) + 'px';
