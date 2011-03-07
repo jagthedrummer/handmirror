@@ -1,3 +1,8 @@
+/*
+ * http://javascriptcompressor.com/
+ * The URL above can turn this file into a deployable, compressed version.
+ */
+
 /**
  * @author Jeremy Green
  * @copyright Copyright � 2011, Jeremy Green
