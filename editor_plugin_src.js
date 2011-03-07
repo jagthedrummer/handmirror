@@ -31,7 +31,7 @@
 
 			// Register handmirror button
 			ed.addButton('handmirror', {
-				title : 'handmirror.desc',
+				title : 'Source Code View (HandMirror)',
 				cmd : 'handmirror',
 				image : url + '/img/html.gif'
 			});

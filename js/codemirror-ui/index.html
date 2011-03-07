@@ -96,7 +96,7 @@
 	<pre>
 //first set up some variables
 var textarea = document.getElementById('code1');
-var uiOptions = { path : 'js/', quickSearch : false }
+var uiOptions = { path : 'js/', searchMode : 'popup' }
 var codeMirrorOptions = {
     height: "250px",
     content: textarea.value,
@@ -126,7 +126,7 @@ var editor = new CodeMirrorUI(textarea,uiOptions,codeMirrorOptions);	</pre>
 					path - String - The path to the codemirror-ui js directory (relative to the current document). 
 				</li>
 				<li>
-					quickSearch - boolean - Whether or not to include the 'quick search' bar.  
+					searchMode - String - Options are 'inline', 'popup', or 'dialog'  
 				</li>
 				<li>
 					buttons - Array - An array of button names that should be included in the button bar.
@@ -160,7 +160,7 @@ var editor = new CodeMirrorUI(textarea,uiOptions,codeMirrorOptions);	</pre>
 	<h2>Another example</h2>
 	
 	<p>
-		This editor is enabled with the inline 'quick search' widget.
+		This editor is enabled with the 'inline' search widget.
 	</p>
 	<p>
 		The button for the popup search widget has been removed, 
@@ -200,7 +200,7 @@ var editor = new CodeMirrorUI(textarea,uiOptions,codeMirrorOptions);	</pre>
 <pre>
 var uiOptions = {
 	path : 'js/',
-	quickSearch : true,
+	searchMode = 'inline',
 	buttons : ['undo','redo','jump','reindent']
 }
 </pre>
@@ -215,6 +215,19 @@ var uiOptions = {
 		Some browsers (at least Google Chrome) don't allow windows launched from a document hosted at a file:// URL to communicate with each other.
 		The pop up find/replace widget will seem to be broken if you're viewing this page (or any page with CodeMirrorUI) directly from your local disk.
 	</p>
+	
+	<h2>Find the code @ Github</h2>
+	<a href="https://github.com/jagthedrummer/codemirror-ui">https://github.com/jagthedrummer/codemirror-ui</a>
+	
+	<h2>Acknowledgements</h2>
+	<h3><a href="http://codemirror.net/">Marijn Haverbeke - CodeMirror</a></h3>
+	<p>
+		Thanks to Marijn Haverbeke for creating and releasing CodeMirror in the first place.  
+		Whithout his excellent contribution to the community this project would have no reason to exist.
+	</p>
+	
+	<h3><a href="http://www.famfamfam.com/lab/icons/silk/">Mark James - Silk Icons</a></h3>
+	I used the Silk icon set from Mark James of <a href="http://www.famfamfam.com/">famfamfam.com</a> fame.  
 </div>
 
 
@@ -230,7 +243,7 @@ var uiOptions = {
   var editor = new CodeMirrorUI(textarea,
    {
   	path : 'js/',
-	quickSearch : false
+	searchMode : 'popup'
    },
    {
     height: "250px",
@@ -248,7 +261,7 @@ var uiOptions = {
   var editor2 = new CodeMirrorUI(textarea2,
    {
   	path : 'js/',
-	quickSearch : true,
+	searchMode : 'inline',
 	buttons : ['undo','redo','jump','reindent']
    },
    {
