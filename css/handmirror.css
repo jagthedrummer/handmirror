@@ -1,10 +1,19 @@
 .codemirror-ui-button-frame input,.codemirror-ui-button-frame label{
-	font-size:1.1em;	
+  font-size:1em;
+}
+
+.codemirror-ui-button-frame{
+
 }
 
 .codemirror-ui-button-frame input[type=button]{
 }
 
+
+.activeline {background: #e5ecf9 !important;}
+
+
+/*
 .CodeMirror-line-numbers{
   margin: .4em;
   margin-right:0px;
@@ -25,3 +34,4 @@
 	padding-left:5px;
 	padding-right:5px;
 }
+*/
