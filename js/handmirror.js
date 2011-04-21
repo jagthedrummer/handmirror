@@ -5,12 +5,12 @@ tinyMCEPopup.requireLangPack();
 tinyMCEPopup.onInit.add(onLoadInit);
 
 function saveContent() {
-	mirror.toTextArea();
+	ui.toTextArea();
 	tinyMCEPopup.editor.setContent(document.getElementById('htmlSource').value, {source_view : true});
 	tinyMCEPopup.close();
 }
 
-var mirror = null;
+var ui = null;
 
 function onLoadInit() {
 	tinyMCEPopup.resizeToInnerSize();
@@ -24,7 +24,7 @@ function onLoadInit() {
 	var textarea = document.getElementById('htmlSource');
 	  //CodeMirror.replace(textarea);
 	  
-	var ui = new CodeMirrorUI(textarea,
+	ui = new CodeMirrorUI(textarea,
 	   {
 	  	path : 'js/codemirror-ui/js/'
 	   },
